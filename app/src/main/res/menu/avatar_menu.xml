@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/avatar_take_photo"
+            android:icon="@drawable/ic_takephoto"
+            android:title="拍照"
+            />
+
+        <item
+            android:id="@+id/avatar_from_album"
+            android:icon="@drawable/ic_album"
+            android:title="从相册选择照片"/>
+
+    </group>
+</menu>

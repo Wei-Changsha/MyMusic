@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="150sp">
+
+    <ImageView
+        android:id="@+id/singer_pic_list"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:src="@drawable/pic"/>
+    <TextView
+        android:id="@+id/singer_name_list"
+        android:layout_width="100sp"
+        android:layout_height="25sp"
+        android:text="IU"
+        android:textColor="@color/lightBlack"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/singer_intro_list"
+        android:layout_width="100sp"
+        android:layout_height="25sp"
+        android:text="韩国歌手，演员韩国歌手，演员韩国歌手，演员"
+        android:textColor="@color/gray"
+        android:gravity="center"
+        android:singleLine="true"
+        android:ellipsize="end"/>
+
+</LinearLayout>

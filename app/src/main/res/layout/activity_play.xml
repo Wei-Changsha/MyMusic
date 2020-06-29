@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.musicandroid.play.BackgourndAnimationRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/ic_blackground"
+    tools:context=".play.PlayActivity">
+
+<androidx.appcompat.widget.Toolbar
+    android:id="@+id/home_toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:layout_alignParentTop="true"
+
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    app:subtitleTextAppearance="@style/netease_toolbar_subtitle"
+    app:titleTextAppearance="@style/netease_toolbar_title"
+    android:layout_marginTop="30sp"
+    >
+</androidx.appcompat.widget.Toolbar>
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        >
+    </View>
+
+    <include
+        android:layout_marginTop="90sp"
+        android:id="@+id/disc_view"
+        layout="@layout/layout_discview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </include>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/music_time"
+        android:orientation="horizontal"
+        android:layout_marginLeft="40sp"
+        android:layout_marginRight="40sp"
+        >
+        <ImageView
+            android:id="@+id/play_heart"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_heart0"/>
+        <ImageView
+            android:id="@+id/play_download"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_download0"/>
+        <ImageView
+            android:id="@+id/play_lyric"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_lyric"/>
+        <ImageView
+            android:id="@+id/play_comment"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_comment"/>
+        <ImageView
+            android:id="@+id/play_more"
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_more0"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/music_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_above="@id/ll_play_option">
+        <TextView
+            android:id="@+id/tvCurrentTime"
+            style="@style/music_time_text_style"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="01:34"
+            android:layout_alignParentLeft="true">
+
+        </TextView>
+        <SeekBar
+            android:id="@+id/music_seek_bar"
+            style="@style/music_time_seek_bar_style"
+            android:layout_centerInParent="true"
+            android:layout_toEndOf="@+id/tvCurrentTime"
+            android:layout_toStartOf="@+id/tv_total_time"
+            android:paddingEnd="15sp"
+            android:paddingStart="15sp"
+            android:layout_toRightOf="@+id/tvCurrentTime"
+            android:layout_toLeftOf="@+id/tv_total_time"
+            android:thumbTint="#fff"
+            android:progressTint="#fff"
+
+            >
+
+        </SeekBar>
+
+        <TextView
+            android:id="@+id/tv_total_time"
+            style="@style/music_time_text_style"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="05:34"
+            android:layout_alignParentRight="true">
+        </TextView>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_play_option"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="10dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="5dp"
+        >
+
+        <ImageView
+            android:id="@+id/iv_last"
+            android:layout_width="80sp"
+            android:layout_height="80sp"
+            android:src="@drawable/ic_last"/>
+
+
+        <ImageView
+            android:id="@+id/iv_play_or_pause"
+            android:layout_width="100sp"
+            android:layout_height="100sp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_play"/>
+
+        <ImageView
+            android:id="@+id/iv_next"
+            android:layout_width="80sp"
+            android:layout_height="80sp"
+            android:src="@drawable/ic_next"/>
+
+    </LinearLayout>
+</RelativeLayout>
+
+</com.example.musicandroid.play.BackgourndAnimationRelativeLayout>

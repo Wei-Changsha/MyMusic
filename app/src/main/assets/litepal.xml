@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<litepal>
+    <dbname value="MusicBean"></dbname>
+    <version value="1"></version>
+
+    <list>
+<!--        <mapping class="com.example.reader.bean.Book"></mapping>-->
+<!--        <mapping class="com.example.reader.bean.BookD"></mapping>-->
+        <mapping class="com.example.musicandroid.data.UserSongListBean"></mapping>
+
+
+    </list>
+</litepal>

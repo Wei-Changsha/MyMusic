@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#fff"
+            android:theme="@style/ToolBarStyle"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            />
+
+
+        <RelativeLayout
+            android:id="@+id/bottom_home"
+            android:layout_width="match_parent"
+            android:layout_height="56sp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:background="#EEECEC"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            >
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/bottom_avatar"
+                android:layout_width="70sp"
+                android:layout_height="match_parent"
+                android:padding="4sp"
+                android:layout_alignParentLeft="true"
+                android:src="@drawable/pic"
+                android:focusable="false"
+                android:clickable="false"/>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_toRightOf="@+id/bottom_avatar"
+                android:divider="@drawable/divider"
+                android:showDividers="end"
+                android:dividerPadding="1.5dp">
+
+
+                <TextView
+                    android:id="@+id/bottom_song"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="歌名"
+                    android:gravity="center_vertical"
+                    android:focusable="false"
+                    android:clickable="false"
+                    />
+                <TextView
+                    android:id="@+id/bottom_singer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="歌手"
+                    android:focusable="false"
+                    android:clickable="false"/>
+
+            </LinearLayout>
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/bottom_play"
+                android:layout_width="70sp"
+                android:layout_height="match_parent"
+                android:padding="6sp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_play"
+                android:focusable="true"
+                android:clickable="true"
+               />
+
+        </RelativeLayout>
+        </RelativeLayout>
+
+
+
+
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

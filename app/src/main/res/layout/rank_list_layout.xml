@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/activity_base_home"
+        />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <!--        创建歌单-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="40sp"
+                android:orientation="horizontal"
+                android:layout_marginTop="10sp">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="歌单列表"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorNormalText"
+                    android:gravity="center"/>
+
+                <!--            z这里设置新建歌单的数量 @+id/my_create_num-->
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text=""
+                    android:textSize="13sp"
+                    android:textColor="@color/gray"
+                    android:gravity="center"
+                    android:layout_toRightOf="@+id/myHome_tv1"/>
+
+                <Button
+                    android:id="@+id/rank_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="更多   >"
+                    android:textColor="@color/gray"
+                    android:textSize="13sp"
+                    android:background="#fff"
+
+
+                    />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rank_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
+        </LinearLayout>
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
